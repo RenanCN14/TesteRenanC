@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ccc;
+        }
+
+        .blue-bar {
+            background-color: #1e3799;
+            height: 23px;
+            width: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 15px;
+        }
+
+        .blue-bar p {
+            color: #fff;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .table-container {
+            display: table;
+            width: 100%;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        header {
+            background-color: #fff;
+            height: 80px;
+            width: 100%;
+            position: relative;
+        }
+
+        section.slider {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            padding: 0 !important;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            width: 400%;
+            height: auto;
+            display: flex;
+            z-index: 9999
+        }
+
+        .slider-content input {
+            display: none;
+        }
+
+        .slide-box {
+            width: 25%;
+            height: auto;
+            position: relative;
+            text-align: center;
+        }
+
+        .nav-manual,
+        .nav-auto {
+            position: absolute;
+            width: 100%;
+            margin-top: 35%;
+            justify-content: center;
+            display: none;
+        }
+
+        .nav-manual .manual-btn,
+        .nav-auto div {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .nav-manual .manual-btn:not(:last-child),
+        .nav-auto div:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .nav-manual .manual-btn:hover {
+            background-color: black;
+        }
+
+
+
+        .slide-box img {
+            width: 100%;
+        }
+
+        nav li {
+            display: inline-block;
+            float: right;
+        }
+
+        nav li a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px;
+            padding-top: 40px;
+        }
+
+        .option:hover.dropdown-menu2 {
+            display: block;
+        }
+
+        .dropdown-menu,
+        .dropdown-menu2 {
+            position: absolute;
+            background-color: #1e3799;
+            display: none;
+        }
+
+        .option a:hover .dropdown-menu2 {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 5px;
+            color: #fff;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .image-space {
+            background-color: #1e3799;
+            width: 325px;
+            height: 212px;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: wrap;
+            justify-content: center;
+        }
+
+        .small-image-space {
+            background-color: #1e3799;
+            width: 196px;
+            height: 162px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .description {
+            color: #555;
+        }
+
+        a:-webkit-any-link {
+            color: rgb(129, 127, 127);
+            text-decoration: none;
+        }
+
+        a:-webkit-any-link :hover a {
+            color: #555;
+            transition: 1s
+        }
+
+        footer {
+            background-color: rgb(75, 72, 72);
+            height: auto;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blue-bar">
+        <p>11 1234-1234</p>
+        <p style="margin-right:9%; margin-left: 10px;">11 1234-1234</p>
+    </div>
+    <div class="container">
+        <div class="table-container">
+            <div class="table-row">
+                <div class="table-cell">
+                    <header>
+                        <nav class="menu">
+                            <ul>
+                                <li>
+                                    <a href="#">CONTATO</a>
+                                </li>
+                                <li>
+                                    <a href="#">CLIENTES</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">EMPRESA</a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" style="color: white">SUBMENU1</a>
+                                        <a href="#" style="color: white">SUBMENU1</a>
+                                        <a href="#" style="color: white">SUBMENU1</a>
+                                        <a href="#" class="option" style="color: white">SUBMENU1
+                                            <div class="dropdown-menu2">
+                                                <a href="#">SUBMENU2</a>
+                                                <a href="#">SUBMENU2</a>
+                                                <a href="#">SUBMENU2</a>
+                                                <a href="#">SUBMENU2</a>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">HOME</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                    <section class="slider">
+                        <div class="slider-content">
+
+                            <input type="radio" name="btn-radio" id="radio1">
+                            <input type="radio" name="btn-radio" id="radio2">
+
+                            <div class="slide-box primeiro">
+                                <img class="img1" src="https://source.unsplash.com/894x290/" alt="slide1">
+                            </div>
+
+                            <div class="nav-auto">
+                                <div class="auto-btn1"></div>
+                            </div>
+
+                            <div class="nav-manual">
+                                <label for="radio1" class="manual-btn"></label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="content">
+                        <div class="img-txt">
+                            <div class="image-space"></div>
+                            <div class="textos">
+                                <h2>TESTE DE HTML</h2>
+                                <p>Texto</p>
+                                <p>BOXES DE DESTAQUE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image-description">
+                            <div class="small-image-space"></div>
+                            <div class="description">Descrição da imagem 1</div>
+                        </div>
+                        <div class="image-description">
+                            <div class="small-image-space"></div>
+                            <div class="description">Descrição da imagem 2</div>
+                        </div>
+                        <div class="image-description">
+                            <div class="small-image-space"></div>
+                            <div class="description">Descrição da imagem 3</div>
+                        </div>
+                        <div class="image-description">
+                            <div class="small-image-space"></div>
+                            <div class="description">Descrição da imagem 4</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="links">
+            <a href="#">HOME &nbsp;</a>
+            <a href="#">EMPRESA &nbsp;</a>
+            <a href="#">CLIENTES &nbsp;</a>
+            <a href="#">CONTATO</a>
+        </div>
+        RODAPE
+    </footer>
+</body>
+
+</html>
